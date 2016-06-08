@@ -1,22 +1,39 @@
-<h1>Welcome to Lisa Autz's Website</h1>
-
-<%= link_to 'Articles', controller: 'articles' %>
-<%= link_to 'New Article', new_article_path %>
+<div class="jumbotron">
+  <h1>Lisa Autz: Writer/Researcher/TEDxOrganizer</h1>
+</div>
 
 
 <h1>Articles</h1>
- 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-    <th colspan="2"></th>
-  </tr>
- 
-  <% @article.each do |article| %>
-    <tr>
-      <td><%= link_to article.title, article_path(article) %></td>
-      <td><%= article.text %></td>
-    </tr>
-  <% end %>
-</table>
+<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <%= image_tag("desert.jpg", :alt => "image1") %>
+      <div class="caption">
+        <h3>The Legacy of Desertification In Violent Conflict</h3>
+        <p>Perhaps what is most peculiar about the so-called Arab Spring is that it arguably began in Tunisia with a simple fruit vendor desperate to make some money during a record high food price spike</p>
+        <a href="../articles/2" class="btn btn-primary" role="button">Read More</a>
+      </div>
+    </div>
+  </div>
+<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <%= image_tag("democracy.jpg", :alt => "image2") %>
+      <div class="caption">
+        <h3>Uncontested Democracy: New York ballots offer voters startlingly little choice</h3>
+        <p>The strength of a democratic government is in its citizens' ability to choose their representatives. But if the choices are limited, is the process truly democratic?</p>
+        <p><a href="../articles/3" class="btn btn-primary" role="button">Read More</a>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <%= image_tag("citycouncil.jpg", :alt => "image3") %>
+      <div class="caption">
+        <h3>The New City Council: What’s Changed and What Hasn’t in 2014</h3>
+        <p>Horse carriages, chokeholds, and plastic bags. Legislation on these topics has recently been introduced to the New York City Council and shown marked division among its members.</p>
+        <p><a href="../articles/4" class="btn btn-primary" role="button">Read More</a> 
+      </div>
+    </div>
+  </div>
